@@ -20,6 +20,8 @@ Rationale: Originally, I had been using a separate GUI program for yt-dlp on Win
 4. Execute the program and use a number key + enter to select your desired option
 
 ## To-Do List (Ordered in terms of priority)
+- Create a Makefile
+- Setup a build workflow for testing and making releases
 - Replace usage of scanf() with something safer
 - Replace all usages of system() with something safer
 - Implement more options for downloading
