@@ -28,6 +28,5 @@ Rationale: Originally, I had been using a separate GUI program for yt-dlp on Win
 - Replace all usages of system() with something safer
 - Implement more options for downloading
 - Implement a custom option to allow users to pass custom switches
-- Update the README
 - Windows support?
 - Make a UI for it?
