@@ -1,7 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]) {
+
+  // Checking if a list.txt exists and prompting if not
+  if (access("list.txt", F_OK) == 0) {
+  } else {
+    fprintf(stderr, "No list.txt found.\n");
+    printf("Would you like one to be created? (y/n) ");
+    char selection;
+    scanf("%c", &selection);
+    if (selection == 'y') {
+      FILE *fp = fopen("list.txt", "a");
+    }
+    return 0;
+  }
 
   system("clear");
 
