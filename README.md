@@ -15,16 +15,16 @@ Rationale: Originally, I had been using a separate GUI program for yt-dlp on Win
 
 ## How to Use
 1. Check the [Requirements](#requirements) section and ensure everything is installed
-2. Compile the program using GCC (Other functional C compilers should work fine, just untested)
+2. Compile the program using the Makefile
 3. Copy+paste a list of URLs for yt-dlp to download into list.txt and save the file
 4. Execute the program and use a number key + enter to select your desired option
 
 ## To-Do List (Ordered in terms of priority)
-- Create a Makefile
-- Setup a build workflow for testing and making releases
 - Replace usage of scanf() with something safer
 - Replace all usages of system() with something safer
 - Implement more options for downloading
+- Improve Makefile
+- Setup a build workflow for testing and making releases
 - Implement a custom option to allow users to pass custom switches
 - Update the README
 - Windows support?
