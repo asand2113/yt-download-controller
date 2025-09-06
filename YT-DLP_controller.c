@@ -13,6 +13,12 @@ int main(int argc, char *argv[]) {
     scanf("%c", &selection);
     if (selection == 'y') {
       FILE *fp = fopen("list.txt", "a");
+      if (fp != NULL) {
+        printf("list.txt successfully created.\n");
+      } else {
+        printf("Failed to create list.txt (Check file permissions).\n");
+      }
+      fclose(fp);
     }
     return 0;
   }
@@ -21,6 +27,7 @@ int main(int argc, char *argv[]) {
 
   int option = -1;
 
+  // Prompt the user
   printf("Please select how to download:\n");
   printf("1) MP3\n");
   printf("2) MP4 1080p\n");
@@ -29,6 +36,7 @@ int main(int argc, char *argv[]) {
 
   scanf(" %d", &option);
 
+  // Check which option the user selected
   switch (option) {
   case 1:
     system("python3 yt-dlp -a list.txt -x -o '%(title)s.%(ext)s' "
