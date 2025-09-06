@@ -4,6 +4,14 @@
 
 int main(int argc, char *argv[]) {
 
+  // Checking if yt-dlp is installed
+  if (access("yt-dlp", F_OK) == 0) {
+  } else {
+    fprintf(stderr, "Failed to find yt-dlp. Please ensure it is installed and "
+                    "in the current directory.\n");
+    return 0;
+  }
+
   // Checking if a list.txt exists and prompting if not
   if (access("list.txt", F_OK) == 0) {
   } else {
